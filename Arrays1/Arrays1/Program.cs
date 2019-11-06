@@ -38,7 +38,27 @@ namespace Arrays1
                 //Tehtävä 2 valinta
                 else if (select == 2)
                 {
-                    
+                    int[] iT = new int[100];
+                    Random rnd = new Random();
+                    int sum = 0;
+
+                    for (int i = 0; i < 100; i++)
+                    {
+                        iT[i] = rnd.Next(51);
+                    }
+
+                    for (int j = 0; j < 100; j++)
+                    {
+                        sum += iT[j];
+                    }
+                    decimal average = Decimal.Divide(sum, 100);
+
+                    for (int k = 0; k < 100; k++)
+                    {
+                        Console.WriteLine(k + ". " + iT[k]);
+                    }
+
+                    Console.WriteLine("Average: " + average);
                 }
                 
                 else
